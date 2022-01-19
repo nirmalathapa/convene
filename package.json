@@ -33,7 +33,7 @@
     "axios": "^0.25.0",
     "fs-extra": "^10.0.0",
     "geckodriver": "^3.0.1",
-    "get-urls": "^10.0.1",
+    "get-urls": "^11.0.0",
     "lodash": "^4.17.21",
     "promise-retry": "^2.0.1",
     "selenium-webdriver": "^4.1.1",
