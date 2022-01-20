@@ -1,11 +1,11 @@
-const { When, Then } = require("@cucumber/cucumber");
-const assert = require("assert").strict;
+import { When, Then } from "@cucumber/cucumber";
+import { strict as assert } from "assert";
 
-const Invitation = require("../lib/Invitation");
-const Space = require("../lib/Space");
-const Actor = require("../lib/Actor");
-const { SpaceEditPage, SignInPage } = require("../harness/Pages");
-const Component = require("../harness/Component");
+import Invitation from "../lib/Invitation.js";
+import Space from "../lib/Space.js";
+import Actor from "../lib/Actor.js";
+import { SpaceEditPage, SignInPage } from "../harness/Pages.js";
+import Component from "../harness/Component.js";
 
 When(
   "an {invitation} to {a} {space} is sent by {actor}",

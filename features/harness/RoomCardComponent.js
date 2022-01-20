@@ -1,15 +1,15 @@
-const { By, ThenableWebDriver } = require("selenium-webdriver");
+import { By, ThenableWebDriver } from "selenium-webdriver";
 
-const Component = require("./Component");
+import Component from "./Component.js";
 
-const Room = require("../lib/Room");
-const AccessCode = require("../lib/AccessCode");
+import Room from "../lib/Room.js";
+import AccessCode from "../lib/AccessCode.js";
 
-const RoomPage = require("./RoomPage");
-const RoomEditPage = require("./RoomEditPage");
-const WaitingRoomPage = require("./WaitingRoomPage");
+import RoomPage from "./RoomPage.js";
+import RoomEditPage from "./RoomEditPage.js";
+import WaitingRoomPage from "./WaitingRoomPage.js";
 
-class RoomCardComponent extends Component {
+export default class RoomCardComponent extends Component {
   /**
    * @param {ThenableWebDriver} driver
    * @param {Room} room
@@ -103,5 +103,3 @@ class RoomCardComponent extends Component {
     return this.component(".--configure");
   }
 }
-
-module.exports = RoomCardComponent;

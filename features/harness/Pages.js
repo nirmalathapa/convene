@@ -1,15 +1,15 @@
-const Page = require("./Page");
-const RoomPage = require("./RoomPage");
-const RoomEditPage = require("./RoomEditPage");
-const WaitingRoomPage = require("./WaitingRoomPage");
+import Page from "./Page.js";
+import RoomPage from "./RoomPage.js";
+import RoomEditPage from "./RoomEditPage.js";
+import WaitingRoomPage from "./WaitingRoomPage.js";
 
-const SpacePage = require("./SpacePage");
-const SpaceEditPage = require("./SpaceEditPage");
+import SpacePage from "./SpacePage.js";
+import SpaceEditPage from "./SpaceEditPage.js";
 
-const MePage = require("./MePage");
-const SignInPage = require("./SignInPage");
+import MePage from "./MePage.js";
+import SignInPage from "./SignInPage.js";
 
-module.exports = {
+export {
   Page,
   SpacePage,
   MePage,

@@ -2,7 +2,8 @@
   "name": "convene",
   "version": "0.1.0",
   "description": "Community owned tools that bring people together, both online and off",
-  "main": "index.js",
+  "exports": "./index.js",
+  "type": "module",
   "engines": {
     "node": "~16.13",
     "yarn": "~1.22"
@@ -10,7 +11,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "build:css": "postcss ./app/assets/stylesheets/application.postcss.css -o ./app/assets/builds/application.css",
-    "test": "cucumber-js --format @cucumber/pretty-formatter --tags 'not @unscheduled and not @wip and not @unimplemented-steps and not @unstarted'"
+    "test": "cucumber-js --tags 'not @unscheduled and not @wip and not @unimplemented-steps and not @unstarted'"
   },
   "repository": {
     "type": "git",
@@ -28,13 +29,12 @@
   },
   "homepage": "https://github.com/zinc-collective/convene#readme",
   "devDependencies": {
-    "@cucumber/cucumber": "^7.3.2",
-    "@cucumber/pretty-formatter": "^1.0.0-alpha.1 ",
+    "@cucumber/cucumber": "^8.0.0-rc.2",
     "axios": "^0.25.0",
     "fs-extra": "^10.0.0",
     "geckodriver": "^3.0.1",
     "get-urls": "^11.0.0",
-    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "promise-retry": "^2.0.1",
     "selenium-webdriver": "^4.1.1",
     "webpack-dev-server": "^4.7.3"

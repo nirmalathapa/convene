@@ -1,7 +1,7 @@
-const { Given, When, Then } = require("@cucumber/cucumber");
+import { When, Then } from "@cucumber/cucumber";
 
-const { SpaceEditPage } = require("../harness/Pages");
-const { Actor, Space } = require("../lib");
+import { SpaceEditPage } from "../harness/Pages.js";
+import { Actor, Space } from "../lib/index.js";
 
 
 When("a Space Owner adds a Hookup to their Space", async function () {

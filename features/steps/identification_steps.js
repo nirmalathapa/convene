@@ -1,9 +1,7 @@
-const assert = require("assert").strict;
-const { Given, When, Then } = require("@cucumber/cucumber");
-
-const { SignInPage, SpacePage, MePage } = require("../harness/Pages");
-const { Space, Actor } = require("../lib");
-
+import { Given, Then, When } from "@cucumber/cucumber";
+import { strict as assert } from "assert";
+import { MePage, SignInPage } from "../harness/Pages.js";
+import { Actor, Space } from "../lib/index.js";
 
 Given(
   "an unauthenticated {actor} has requested to be identified via Email",

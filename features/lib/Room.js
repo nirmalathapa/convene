@@ -1,5 +1,5 @@
-const slugify = require ('./slugify');
-const AccessLevel = require('./AccessLevel')
+import slugify from './slugify.js';
+import AccessLevel from './AccessLevel.js';
 
 class Room {
 
@@ -25,4 +25,4 @@ class Room {
 }
 
 
-module.exports = Room;
+export default Room;

@@ -1,6 +1,7 @@
-const getUrls = require("get-urls");
-const { ThenableWebDriver } = require("selenium-webdriver");
-const InvitationResponsePage = require("../harness/InvitationResponsePage");
+import getUrls from 'get-urls';
+import { ThenableWebDriver } from 'selenium-webdriver';
+import InvitationResponsePage from '../harness/InvitationResponsePage.js';
+import MailServer from './MailServer.js';
 
 /**
  *
@@ -15,9 +16,8 @@ function findUrl(text, regex) {
     }
   }
 }
-const MailServer = require("./MailServer");
 
-class Invitation {
+export default class Invitation {
   constructor(emailAddress) {
     this.emailAddress = emailAddress;
   }
@@ -72,5 +72,3 @@ class Invitation {
     return (this._emailServer = this._emailServer || new MailServer());
   }
 }
-
-module.exports = Invitation;

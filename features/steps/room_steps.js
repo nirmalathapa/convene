@@ -1,24 +1,10 @@
-const { Given, When, Then } = require("@cucumber/cucumber");
+import { Given, Then, When } from "@cucumber/cucumber";
+import { strict as assert } from "assert";
+import { RoomCardComponent } from "../harness/Components.js";
+import { RoomEditPage, RoomPage, SpaceEditPage, SpacePage } from "../harness/Pages.js";
+import { AccessCode, AccessLevel, Actor, linkParameters, Room } from "../lib/index.js";
 
-const {
-  SpacePage,
-  SpaceEditPage,
-  RoomEditPage,
-  RoomPage,
-} = require("../harness/Pages");
-const { RoomCardComponent } = require("../harness/Components");
-const {
-  Space,
-  Room,
-  Actor,
-  linkParameters,
-  AccessCode,
-  AccessLevel,
-} = require("../lib");
-
-const assert = require("assert").strict;
-
-Given("{a} {space} with {a} {accessLevel} {room}", async function (_, space, _, accessLevel, room) {
+Given("{a} {space} with {a} {accessLevel} {room}", async function (_1, space, _2, accessLevel, room) {
   linkParameters({ accessLevel, room, space });
   this.space = await new SpacePage(this.driver, space).visit();
   const matchingRooms = await this.space.roomCardsWhere({ accessLevel });
@@ -53,7 +39,7 @@ Given("{a} {space} with {a} {accessLevel} {room}", async function (_, space, _, 
 
 When(
   "{a} {actor} unlocks {a} {accessLevel} {room} with {a} {accessCode}",
-  async function (_, actor, _, accessLevel, room, _, accessCode) {
+  async function (_1, actor, _2, accessLevel, room, _3, accessCode) {
     const { space } = linkParameters({ room, accessLevel });
     await actor.signIn(this.driver, space);
 
@@ -66,7 +52,7 @@ When(
 
 When(
   "{a} {actor} locks {a} {accessLevel} {room} with {a} {accessCode}",
-  async function (_, actor, _, accessLevel, room, _, accessCode) {
+  async function (_1, actor, _2, accessLevel, room, _3, accessCode) {
     const { space } = linkParameters({ accessLevel, room });
     await actor.signIn(this.driver, space);
 
@@ -100,7 +86,7 @@ Then(
    * @param {Room} room
    * @param {AccessCode} accessCode
    */
-  async function (_, actor, _, accessLevel, room, _, accessCode) {
+  async function (_1, actor, _2, accessLevel, room, _3, accessCode) {
     linkParameters({ room, accessLevel });
 
     await this.driver.manage().deleteAllCookies();
@@ -116,7 +102,7 @@ Then(
 
 Then(
   "{a} {actor} may enter {a} {accessLevel} {room} after providing {a} {accessCode}",
-  async function (_, actor, _, accessLevel, room, _, accessCode) {
+  async function (_1, actor, _2, accessLevel, room, _3, accessCode) {
     linkParameters({ room, accessLevel, accessCode });
     await this.driver.manage().deleteAllCookies();
 
@@ -154,7 +140,7 @@ Then("{a} {room} is {accessLevel}", async function (_, room, accessLevel) {
 
 Then(
   "{a} {actor} is informed they need to set {a} {accessCode} when they are locking {a} {room}",
-  async function (_, actor, _, accessCode, _, room) {
+  async function (_1, actor, _2, accessCode, _3, room) {
     const roomSettingPage = new RoomEditPage(this.driver);
     assert(await roomSettingPage.accessCodeError());
   }

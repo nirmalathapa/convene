@@ -1,5 +1,5 @@
-const { defineParameterType } = require("@cucumber/cucumber");
-const { AccessCode } = require("../../lib");
+import { defineParameterType } from '@cucumber/cucumber';
+import { AccessCode } from '../../lib/index.js';
 
 defineParameterType({
   name: "accessCode",

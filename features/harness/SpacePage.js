@@ -1,15 +1,8 @@
-const { By, until } = require("selenium-webdriver");
-const assert = require("assert").strict;
+import Page from './Page.js';
+import Room from '../lib/Room.js';
+import RoomCardComponent from './RoomCardComponent.js';
 
-const Page = require('./Page')
-const RoomPage = require("./RoomPage");
-
-const Room = require('../lib/Room')
-
-const Component = require('./Component');
-const RoomCardComponent = require('./RoomCardComponent');
-
-class SpacePage extends Page {
+export default class SpacePage extends Page {
   constructor(driver, space) {
     super(driver);
     this.space = space;
@@ -42,5 +35,3 @@ class SpacePage extends Page {
     );
   }
 }
-
-module.exports = SpacePage;

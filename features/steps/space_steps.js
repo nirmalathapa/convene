@@ -1,8 +1,8 @@
-const { Given, When, Then } = require("@cucumber/cucumber");
-const { RoomPage, SpacePage, SpaceEditPage } = require("../harness/Pages");
-const { linkParameters } = require("../lib");
-const appUrl = require("../lib/appUrl");
-const { Api } = require("../lib/Api");
+import { Given, When, Then } from "@cucumber/cucumber";
+import { RoomPage, SpacePage, SpaceEditPage } from "../harness/Pages.js";
+import { linkParameters } from "../lib/index.js";
+import appUrl from "../lib/appUrl.js";
+import { Api } from "../lib/Api.js";
 
 Given('{a} {space}', function(_, space) {
   return true
@@ -21,7 +21,7 @@ Given('a Space with a Room', function() {
   //       System Test Space
 })
 
-Given('{a} {space} has {a} {actor}', function(_, space, _, actor) {
+Given('{a} {space} has {a} {actor}', function(_1, space, _2, actor) {
   return true
 })
 

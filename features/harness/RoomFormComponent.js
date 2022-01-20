@@ -1,5 +1,5 @@
-const Component = require("./Component");
-const Room = require("../lib/Room");
+import Component from "./Component.js";
+import Room from "../lib/Room.js";
 
 class RoomCardComponent extends Component {
   /**
@@ -20,4 +20,4 @@ class RoomCardComponent extends Component {
   }
 }
 
-module.exports = RoomCardComponent;
+export default RoomCardComponent;

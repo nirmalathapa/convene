@@ -1,5 +1,5 @@
-const axios = require('axios');
-class Api {
+import axios from 'axios';
+export class Api {
   constructor(host, apiKey) {
     this.host = host;
     this.apiKey = apiKey;
@@ -21,7 +21,7 @@ class Api {
     return this.axios.post(path, model)
   }
 }
-exports.Api = Api;
+
 class Repository {
   constructor({ client, endpoint }) {
     this.client = client;

@@ -1,6 +1,6 @@
-const Component = require("./Component");
-const Page = require("./Page");
-const WaitingRoomPage = require("./WaitingRoomPage");
+import Component from "./Component.js";
+import Page from "./Page.js";
+import WaitingRoomPage from "./WaitingRoomPage.js";
 class RoomEditPage extends Page {
   constructor(driver, room) {
     super(driver);
@@ -64,4 +64,4 @@ class RoomEditPage extends Page {
   }
 }
 
-module.exports = RoomEditPage;
+export default RoomEditPage;

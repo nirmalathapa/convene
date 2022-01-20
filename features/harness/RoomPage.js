@@ -1,8 +1,8 @@
-const { ThenableWebDriver } = require("selenium-webdriver");
-const Component = require("./Component");
-const Room = require("../lib/Room");
+import { ThenableWebDriver } from "selenium-webdriver";
+import Component from "./Component.js";
+import Room from "../lib/Room.js";
 
-const Page = require("./Page");
+import Page from "./Page.js";
 
 class RoomPage extends Page {
   /**
@@ -37,4 +37,4 @@ class RoomPage extends Page {
   }
 }
 
-module.exports = RoomPage;
+export default RoomPage;

@@ -1,8 +1,8 @@
-const Page = require("./Page");
-const { last } = require("lodash");
+import Page from "./Page.js";
+import { last } from "lodash-es";
 
 const valueFromText = (text) => last(text.split(": "));
-class MePage extends Page {
+export default class MePage extends Page {
   path() {
     return "/me";
   }
@@ -38,5 +38,3 @@ class MePage extends Page {
       .then(valueFromText);
   }
 }
-
-module.exports = MePage;

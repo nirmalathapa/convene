@@ -1,12 +1,12 @@
-const AccessLevel = require("./AccessLevel");
-const AccessCode = require("./AccessCode");
-const Room = require("./Room");
-const Space = require("./Space");
-const Actor = require("./Actor");
-const concatRegExp = require("./concatRegExp");
-const linkParameters = require("./linkParameters");
+import AccessLevel from "./AccessLevel.js";
+import AccessCode from "./AccessCode.js";
+import Room from "./Room.js";
+import Space from "./Space.js";
+import Actor from "./Actor.js";
+import concatRegExp from "./concatRegExp.js";
+import linkParameters from "./linkParameters.js";
 
-module.exports = {
+export {
   Actor,
   Space,
   Room,

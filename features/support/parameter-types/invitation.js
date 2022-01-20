@@ -1,5 +1,5 @@
-const { defineParameterType } = require("@cucumber/cucumber");
-const Invitation = require('../../lib/Invitation.js')
+import { defineParameterType } from "@cucumber/cucumber";
+import Invitation from '../../lib/Invitation.js';
 
 defineParameterType({
   name: "invitation",

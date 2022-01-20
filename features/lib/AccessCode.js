@@ -1,4 +1,4 @@
-class AccessCode {
+export default class AccessCode {
   constructor(validity) {
     this.validity = validity
   }
@@ -17,5 +17,3 @@ class AccessCode {
     return this.validity == "correct" || this.validity == "valid"
   }
 }
-
-module.exports = AccessCode;

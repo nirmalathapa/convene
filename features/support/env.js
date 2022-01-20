@@ -1,9 +1,9 @@
-const fse = require('fs-extra');
-const { setWorldConstructor, BeforeAll, AfterAll, After, setDefaultTimeout, Status } = require('@cucumber/cucumber');
+import fse from 'fs-extra';
+import { setWorldConstructor, BeforeAll, AfterAll, After, setDefaultTimeout, Status } from '@cucumber/cucumber';
 
-const appUrl = require('../lib/appUrl')
-const { Builder } = require('selenium-webdriver');
-const firefox = require('selenium-webdriver/firefox');
+import appUrl from '../lib/appUrl.js';
+import { Builder } from 'selenium-webdriver';
+import firefox from 'selenium-webdriver/firefox.js';
 
 
 let driver;

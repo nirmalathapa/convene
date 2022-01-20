@@ -1,4 +1,4 @@
-const { defineParameterType } = require("@cucumber/cucumber");
+import { defineParameterType } from '@cucumber/cucumber';
 
 defineParameterType({
   name: "a",

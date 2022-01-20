@@ -1,6 +1,6 @@
-const Page = require("./Page");
+import Page from './Page.js';
 
-class InvitationResponsePage extends Page {
+export default class InvitationResponsePage extends Page {
   constructor(driver, invitation) {
     super(driver);
     this.invitation = invitation
@@ -15,8 +15,6 @@ class InvitationResponsePage extends Page {
   }
 
   submitButton() {
-    return this.component("input[type=submit")
+    return this.component('input[type=submit')
   }
 }
-
-module.exports = InvitationResponsePage;

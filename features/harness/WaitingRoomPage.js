@@ -1,11 +1,10 @@
-const RoomPage = require("./RoomPage");
+import RoomPage from "./RoomPage.js";
 
-const Component = require("./Component");
+import Component from "./Component.js";
 
-const AccessCode = require("../lib/AccessCode");
-const Room = require("../lib/Room");
+import AccessCode from "../lib/AccessCode.js";
 
-class WaitingRoomPage extends RoomPage {
+export default class WaitingRoomPage extends RoomPage {
   /**
    * @param {AccessCode} accessCode
    * @returns {Promise<RoomPage> | Promise<WaitingRoomPage> }
@@ -40,5 +39,3 @@ class WaitingRoomPage extends RoomPage {
     return this.component(".field_with_errors");
   }
 }
-
-module.exports = WaitingRoomPage;

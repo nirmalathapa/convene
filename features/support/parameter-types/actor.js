@@ -1,5 +1,5 @@
-const { defineParameterType } = require("@cucumber/cucumber");
-const Actor = require('../../lib/Actor.js')
+import { defineParameterType } from '@cucumber/cucumber';
+import Actor from '../../lib/Actor.js';
 
 // Actors are the people or sytems our test suite emulates as it
 // interacts with Convene.

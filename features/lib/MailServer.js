@@ -1,6 +1,6 @@
-const axios = require("axios");
-const { filter, last } = require("lodash");
-var promiseRetry = require("promise-retry");
+import axios from "axios";
+import { filter } from "lodash-es";
+import promiseRetry from "promise-retry";
 
 /**
  * Adapter connecting our test suite to our mail handler
@@ -31,8 +31,7 @@ class MailServer {
    * @returns {Promise<MailServerEmail[]>}
    */
   emails() {
-    return axios
-      .get("http://localhost:1080/email")
+    return axios.get("http://localhost:1080/email")
       .then((res) => res.data)
       .catch((err) => console.log(err));
   }
@@ -57,4 +56,4 @@ class MailServer {
  * @property {string} to
  */
 
-module.exports = MailServer;
+export default MailServer;

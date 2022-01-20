@@ -1,4 +1,4 @@
-const Page = require("./Page");
+import Page from "./Page.js";
 
 class SignInPage extends Page {
   constructor(driver, space) {
@@ -34,4 +34,4 @@ class SignInPage extends Page {
   }
 }
 
-module.exports = SignInPage;
+export default SignInPage;

@@ -1,12 +1,12 @@
-const { ThenableWebDriver } = require("selenium-webdriver");
+import getUrls from 'get-urls';
+import { ThenableWebDriver } from 'selenium-webdriver';
 
-const { last } = require("lodash");
-const getUrls = require("get-urls");
-const { MePage, SignInPage } = require("../harness/Pages");
+import { last } from 'lodash-es';
+import { MePage, SignInPage } from '../harness/Pages.js';
 
-const MailServer = require("./MailServer");
+import MailServer from './MailServer.js';
 
-class Actor {
+export default class Actor {
   constructor(type, email) {
     this.type = type;
     this.email = email;
@@ -69,5 +69,3 @@ class Actor {
     return (this._emailServer = this._emailServier || new MailServer());
   }
 }
-
-module.exports = Actor;

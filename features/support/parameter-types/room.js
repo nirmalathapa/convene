@@ -1,6 +1,5 @@
-const { defineParameterType } = require("@cucumber/cucumber");
-const { By } = require("selenium-webdriver");
-const { Room } = require("../../lib");
+import { defineParameterType } from "@cucumber/cucumber";
+import { Room } from "../../lib/index.js";
 
 // This injects a Room class into steps with named rooms (i.e.) `the "Ada" Room` and
 // steps that mention `Room` in isolation.

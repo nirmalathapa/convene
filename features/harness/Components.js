@@ -1,8 +1,8 @@
-const Component = require("./Component");
-const RoomCardComponent = require("./RoomCardComponent");
-const PersonNavigationComponent = require("./PersonNavigationComponent");
+import Component from "./Component.js";
+import RoomCardComponent from "./RoomCardComponent.js";
+import PersonNavigationComponent from "./PersonNavigationComponent.js";
 
-module.exports = {
+export {
   Component,
   RoomCardComponent,
   PersonNavigationComponent

@@ -1,8 +1,8 @@
-const { ThenableWebDriver } = require("selenium-webdriver");
-const Page = require("./Page");
-const Room = require("../lib/Room");
-const RoomCardComponent = require("./RoomCardComponent");
-const Component = require("./Component");
+import { ThenableWebDriver } from "selenium-webdriver";
+import Page from "./Page.js";
+import Room from "../lib/Room.js";
+import RoomCardComponent from "./RoomCardComponent.js";
+import Component from "./Component.js";
 
 class SpaceEditPage extends Page {
   /**
@@ -103,4 +103,4 @@ class SpaceEditPage extends Page {
   }
 }
 
-module.exports = SpaceEditPage;
+export default SpaceEditPage;

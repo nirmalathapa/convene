@@ -1,4 +1,4 @@
-const { By } = require("selenium-webdriver");
+import { By } from "selenium-webdriver";
 class AccessLevel {
   constructor(level) {
     this.level = level;
@@ -24,4 +24,4 @@ class AccessLevel {
   }
 }
 
-module.exports = AccessLevel;
+export default AccessLevel;

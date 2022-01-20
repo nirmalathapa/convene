@@ -1,13 +1,13 @@
-const {
+import {
   By,
   WebElement,
   ThenableWebDriver,
   until,
-} = require("selenium-webdriver");
+} from 'selenium-webdriver';
 /**
  * Provides a test-harness for a particular part of the UI.
  */
-class Component {
+export default class Component {
   /**
    * @param {ThenableWebDriver} driver
    * @param {string} selector
@@ -96,5 +96,3 @@ class Component {
       .then(() => this.driver.findElement(this.selector));
   }
 }
-
-module.exports = Component;

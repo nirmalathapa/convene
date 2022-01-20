@@ -1,6 +1,6 @@
-const SpacePage = require("./SpacePage");
+import SpacePage from './SpacePage.js';
 
-class CustomDomainSpacePage extends SpacePage {
+export class CustomDomainSpacePage extends SpacePage {
   constructor(driver, customDomain) {
     this.customDomain = customDomain;
     super(driver);
@@ -14,5 +14,3 @@ class CustomDomainSpacePage extends SpacePage {
     this.driver.get(`${this.customDomain}/${room.slug}`);
   }
 }
-
-module.exports = CustomDomainSpacePage;

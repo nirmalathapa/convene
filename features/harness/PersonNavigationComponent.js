@@ -1,5 +1,5 @@
-const Component = require("./Component");
-class PersonNavigationComponent extends Component {
+import Component from "./Component.js";
+export default class PersonNavigationComponent extends Component {
   /**
    * @returns {Promise<PersonNavigationComponent>}
    */
@@ -14,5 +14,3 @@ class PersonNavigationComponent extends Component {
     return this.component(".sign-out");
   }
 }
-
-module.exports = PersonNavigationComponent;

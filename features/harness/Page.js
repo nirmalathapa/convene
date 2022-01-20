@@ -1,9 +1,9 @@
-const appUrl = require("../lib/appUrl");
-const { ThenableWebDriver, By } = require("selenium-webdriver");
-const Component = require("./Component");
-const PersonNavigationComponent = require("./PersonNavigationComponent");
+import appUrl from "../lib/appUrl.js";
+import { ThenableWebDriver, By } from "selenium-webdriver";
+import Component from "./Component.js";
+import PersonNavigationComponent from "./PersonNavigationComponent.js";
 
-class Page {
+export default class Page {
   /**
    * @param {ThenableWebDriver} driver
    */
@@ -64,5 +64,3 @@ class Page {
     throw "NotImplemented";
   }
 }
-
-module.exports = Page;
