@@ -3,6 +3,7 @@ const { RoomPage, SpacePage, SpaceEditPage } = require("../harness/Pages");
 const { linkParameters } = require("../lib");
 const appUrl = require("../lib/appUrl");
 const { Api } = require("../lib/Api");
+const AuthenticationMethod = require("../lib/AuthenticationMethod");
 
 // @deprecated
 // @todo
@@ -38,8 +39,11 @@ Given(
     const api = new Api(appUrl(), process.env.OPERATOR_API_KEY);
     console.log({ space, actor, api })
     return api.authenticationMethods()
-      .findOrCreateBy({ contactMethod: 'email', contactLocation: actor.email })
-      .then((authenticationMethod) => authenticationMethod.person)
+      .findOrCreateBy(new AuthenticationMethod({ contactMethod: 'email', contactLocation: actor.email }))
+      .then(
+        (authenticationMethod) =>
+          authenticationMethod.person
+      )
       .then((person) => api.spaceMemberships.findOrCreateBy({ space, person }))
   }
 );
